@@ -22,7 +22,7 @@ const App = () => {
 
   // Calculate nutrition based on weight
   const calculateNutrition = (food, weight) => {
-    const info = foodData[food]; // Use imported food data
+    const info = foodData[food.trim().toLowerCase()];  // Use imported food data
     if (!info) return { calories: 0, protein: 0 };
 
     const [standardWeight, caloriesPerStandardWeight, proteinPerStandardWeight] = info;
